@@ -1,0 +1,37 @@
+class Nodo:
+	def __init__(self, value, siguiente=None):
+		self.data = value
+		self.next = siguiente
+		
+class ListaEnlazada:
+	def __init__(self):
+		self.__head = None
+		
+	def is_empty(self):
+		return self.__head == None
+		
+	def get_tail(self):
+		nodo_actual = self.__head
+		while nodo_actual.next != None:
+			nodo_actual = nodo_actual.next
+		return nodo_actual
+		
+	def append(self, value):
+	
+	def preppend(self, value):
+	
+	def get_size(self):
+		nodo_actual = self.__head
+		contador = 1
+		while nodo_actual.next != None:
+			nodo_actual = nodo_actual.next
+			contador +=1
+		return contador
+		
+	def find_from_head(self, value):
+		nodo_actual = self.__head
+		while nodo_actual != value:
+			if nodo_actual.next == None:
+				return None
+			nodo_actual = nodo_actual.next
+		return nodo_actual
